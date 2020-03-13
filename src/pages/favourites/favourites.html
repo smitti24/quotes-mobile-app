@@ -1,0 +1,66 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Favourite Quotes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<!-- <ion-card *ngFor="let quote of favouriteQuotes; let i = index">
+    <ion-item>
+        <ion-avatar item-start>
+            <img src="https://image.flaticon.com/icons/svg/148/148841.svg">  
+        </ion-avatar>
+        <h2>{{quote.person}}</h2>
+    </ion-item>
+
+    <ion-card-content>
+        <ion-row>
+          <ion-col col-12>
+              <p>{{quote.text}}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12 align-right>
+              <button ion-button (click)="presentModal(quote)" clear>Unfavourite</button>
+          </ion-col>
+        </ion-row>
+        
+      </ion-card-content>
+
+</ion-card> -->
+
+<ion-list>
+    <ion-item-sliding *ngFor="let quote of favouriteQuotes; let i = index">
+        <ion-item >
+            <ion-avatar item-start>
+                <img src="https://image.flaticon.com/icons/svg/148/148841.svg">  
+            </ion-avatar>
+            <h2>{{quote.person}}</h2>
+            <ion-row>
+                <ion-col col-12>
+                    <p>{{quote.text}}</p>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-12 align-right>
+                    <button ion-button (click)="presentModal(quote)" clear>Unfavourite</button>
+                </ion-col>
+              </ion-row>
+        </ion-item>
+        <ion-item-options side="right">
+            <button ion-button color="danger" (click)="onUnFavourite(quote)">
+              <ion-icon name="trash"></ion-icon>
+              Unfavourite
+            </button>
+          </ion-item-options>
+    </ion-item-sliding>
+  
+</ion-list>
+
+
+</ion-content>

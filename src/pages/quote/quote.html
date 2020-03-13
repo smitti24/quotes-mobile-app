@@ -1,0 +1,31 @@
+<!--
+  Generated template for the QuotePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="https://image.flaticon.com/icons/svg/122/122478.svg">
+    </ion-avatar>
+    <ion-title>{{ person }}</ion-title>
+  </ion-item>
+
+
+</ion-header>
+
+
+<ion-content padding>
+  <p>{{ text }}</p>
+  <ion-row>
+    <ion-col col-6 text-left>
+        <button ion-button clear align-right (click)="onClose()">Close</button>
+    </ion-col>
+    <ion-col text-right>
+      <button ion-button color="danger" clear align-right (click)="onClose(true)">Unfavourite</button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
